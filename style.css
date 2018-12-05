@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  font-family:Lato;
+  margin:auto;
+  padding:0;
+}
+body {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	background: #D2D3C9;
+	height: 100vh;
+	max-height: 100vh;
+	width: 100vw;
+	max-width: 100vw;
+}
+header {
+	position: fixed;
+	width: 100vw;
+	height: 15vh;
+	background: #358675;
+	z-index: -1;
+}
+.container {
+    margin: auto;
+    width: 80%;
+    height: 95%;
+    background: #fff;
+    position:relative;
+}
+
+
+.left {
+  width:35%;
+  float:left;
+  height:100px;
+  position:relative;
+}
+
+.right {
+  width:65%;
+  float:left;
+  position: relative;
+}
+.fa {
+  margin-left:12px;
+}
+.logo {
+float:left;
+}
+
+.header-left, .header-right {
+    width: 100%;
+    height: 74px;
+    background: #EAEAEA;
+    border-right: 1px solid #c3c3c3;
+}
+.header-left-icons {
+  float: right;
+  color:#6B7376;
+  font-size: 27px;
+  padding: 18px;
+}
+
+.header-left-icons a {
+  color:#6B7376;
+}
+.left-disclaimer {
+    height: 80px;
+    background: #8EDAFC;
+    display: block;
+    width: 100%;
+}
+.left-disclaimer h2 {
+  font-size: 16px;
+  padding: 17px 0px 1px 0;
+  font-weight: normal;
+}
+.left-disclaimer a {
+  font-size:13px;
+  color:#4F7485;
+
+}
+
+.left-disclaimer-logo {
+  width: 50px;
+  height: 50px;
+  background: #F2FBFF;
+  border-radius: 100%;
+  text-align: left;
+  color: #8EDAFC;
+  line-height: 50px;
+  font-size: 20px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 23px;
+  margin-right: 12px;
+}
+
+.left-searchbar {
+    width: 100%;
+    height: 50px;
+    background: #FAFAFA;
+}
+
+.fa-search {
+  font-size:14px;
+  color:#B6B9BB;
+  position: absolute;
+  margin-top: 17px;
+}
+.left-searchbar-input {
+  width: 96%;
+  height: 34px;
+  background:#fff;
+  padding: 9px;
+  border-radius: 4px;
+  border: 1px solid #e4e4e4;
+  margin-top: 7px;
+  padding-left: 36px;
+  margin-left: 5px;
+}
+
+.avatar {
+  height: 70px;
+  border-radius:40px;
+  padding: 8px;
+  margin-left: 13px;
+}
+.contacts {
+    background: #fff;
+    width: 100%;
+    height: 410px;
+    overflow-y: scroll;
+    float:left;
+}
+
+.contact-active {
+  float:left;
+  background: #E9EBEB;
+  width: 100%;
+  padding-top: 10px;
+}
+.contact-logo {
+  width:30%;
+  float:left;
+}
+.contact-info {
+  height: auto;
+  display: block;
+  float:left;
+  padding-top: 12px;
+  width: 62%;
+}
+
+span.f-right {
+    color: #B6B9BB;
+    font-size: 12px;
+    font-weight: lighter;
+    float:right;
+    margin-right: -20px;
+}
+
+.contact-info span {
+  padding: 14px 8px 5px 0px;
+}
+
+.contact-name {
+  font-size: 17px;
+  font-weight: normal;
+}
+.contact-info p {
+  color:#B6B9BB;
+  font-size: 13px;
+  padding-top: 6px;
+}
+.contact-normal {
+  float:left;
+  background: #ffffff;
+  width: 100%;
+  padding-top: 10px;
+  height: 94px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.contact-normal:hover {
+  background: #f0f1f1;
+}
+.header-right-icons {
+  float: right;
+  color:#6B7376;
+  font-size: 27px;
+  padding: 18px;
+}
+.header-right-icons a {
+  color:#6B7376;
+}
+
+.header-right .contact-info p {
+  color:#6B7376;
+}
+.right-messages {background-image: url(img/mine.jpg);padding: 5% 10%;width: 100%;overflow-y: scroll;margin: auto;}
+.right-messages.active {
+    display: block;
+    height: 70vh;
+    margin-top: -20px !important;
+}
+.message-received {
+  background:#fff;
+  border-radius:10px;
+  padding:20px;
+  width: 50%;
+  float: left;
+  position:relative;
+}
+
+.message-options-panel {
+  display:none;
+}
+.right .right-messages .message-received .message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    color: #B6B9BB;
+}
+.right .right-footer {
+	background-color: #F3EEEA;
+	width: 100%;
+	height: 88px;
+	padding: 7px;
+}
+.right .right-footer .new-message-inputs {
+	height: 50px;
+	margin: 11px 11px;
+	border: 0;
+	border-radius: 5px;
+	padding: 15px;
+	font-size: 14px;
+	font-weight: lighter;
+	width: 80%;
+}
+.right .right-footer .right-footer-icon {
+	line-height: 70px;
+	text-align: center;
+	color: #6B7376;
+	font-size: 25px;
+	width: 51px;
+	height: 48px;
+	float: left;
+}
