@@ -27,6 +27,7 @@ header {
     height: 95%;
     background: #fff;
     position:relative;
+    box-shadow: 0px 0px 28px #404040;
 }
 
 
@@ -150,7 +151,7 @@ float:left;
   display: block;
   float:left;
   padding-top: 12px;
-  width: 62%;
+  width: 55%;
 }
 
 span.f-right {
@@ -174,7 +175,7 @@ span.f-right {
   font-size: 13px;
   padding-top: 6px;
 }
-.contact-normal {
+.contact {
   float:left;
   background: #ffffff;
   width: 100%;
@@ -182,7 +183,7 @@ span.f-right {
   height: 94px;
   border-bottom: 1px solid #e9e9e9;
 }
-.contact-normal:hover {
+.contact:hover {
   background: #f0f1f1;
 }
 .header-right-icons {
@@ -198,11 +199,23 @@ span.f-right {
 .header-right .contact-info p {
   color:#6B7376;
 }
-.right-messages {background-image: url(img/mine.jpg);padding: 5% 10%;width: 100%;overflow-y: scroll;margin: auto;}
+.fa-chevron-down {
+  visibility: hidden;
+}
+
+
+.right .right-messages {
+	display: none;
+	background-image: url('img/mine.jpg');
+	padding: 5% 10%;
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+}
 .right-messages.active {
-    display: block;
     height: 70vh;
-    margin-top: -20px !important;
+    margin-top: -24px !important;
+    width: 100%;
 }
 .message-received {
   background:#fff;
@@ -226,8 +239,9 @@ span.f-right {
 .right .right-footer {
 	background-color: #F3EEEA;
 	width: 100%;
-	height: 88px;
+	height: 87px;
 	padding: 7px;
+	display: flex;
 }
 .right .right-footer .new-message-inputs {
 	height: 50px;
@@ -240,11 +254,97 @@ span.f-right {
 	width: 80%;
 }
 .right .right-footer .right-footer-icon {
-	line-height: 70px;
-	text-align: center;
+	line-height: 44px;
 	color: #6B7376;
 	font-size: 25px;
 	width: 51px;
 	height: 48px;
 	float: left;
+}
+
+.right-footer-icon-mic {
+	line-height: 63px;
+	color: #6B7376;
+	font-size: 25px;
+	width: 53px;
+	height: 63px;
+	float: right;
+	padding: 20px;
+	margin-right: 9px;
+}
+.right .right-messages .message:hover .message-options, .right .right-messages .message .message-options.active {
+	display: block;
+}
+.right .right-messages .message .message-options {
+	display: none;
+	color: #B6B9BB;
+	cursor: pointer;
+}
+.right .right-messages .message .message-options-panel {
+	display: none;
+	background: white;
+	box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
+	position: absolute;
+	bottom: -75px;
+	right: 0;
+	width: 150px;
+	height: 80px;
+}
+.right .right-messages .message .message-options-panel.active {
+	display: block;
+}
+.right .right-messages .message .message-options-panel > div {
+	cursor: pointer;
+	width: 100%;
+	height: 50%;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: center;
+}
+.right .right-messages .message .message-options-panel > div:hover {
+	color: #B6B9BB;
+}
+
+.right .right-messages .message.received {
+	background: white;
+}
+
+.template {
+	display: none;
+}
+.cl-t {
+	clear: both;
+}
+
+.right .right-messages.active {
+	display: block;
+}
+
+
+.message-sent {
+    background: #dcf8c6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    float: right;
+    position: relative;
+}
+
+.right .right-messages .message-sent .message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    color: #454545;
+}
+.right-footer-icon .f-left {
+  float:left;
+}
+
+.right-footer-icon .f-right {
+  float:right;
+}
+
+.fa-microphone {
+  float:right;
 }
