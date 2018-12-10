@@ -154,6 +154,10 @@ float:left;
   width: 55%;
 }
 
+.f-right {
+  float:right;
+}
+
 span.f-right {
     color: #B6B9BB;
     font-size: 12px;
@@ -199,9 +203,6 @@ span.f-right {
 .header-right .contact-info p {
   color:#6B7376;
 }
-.fa-chevron-down {
-  visibility: hidden;
-}
 
 
 .right .right-messages {
@@ -224,11 +225,9 @@ span.f-right {
   width: 50%;
   float: left;
   position:relative;
+  margin-top: 20px;
 }
 
-.message-options-panel {
-  display:none;
-}
 .right .right-messages .message-received .message-time {
     position: absolute;
     bottom: 5px;
@@ -272,24 +271,30 @@ span.f-right {
 	padding: 20px;
 	margin-right: 9px;
 }
+
+.fa-chevron-down .f-right .message-options {
+  display:none;
+}
+
+.right .right-messages .message .message-options {
+    display: none;
+    color: #B6B9BB ;
+    cursor: pointer;
+}
 .right .right-messages .message:hover .message-options, .right .right-messages .message .message-options.active {
 	display: block;
 }
-.right .right-messages .message .message-options {
-	display: none;
-	color: #B6B9BB;
-	cursor: pointer;
+
+.right .right-messages .message.sent {
+	float: right;
+	background: #D5F9BA;
+	padding: 20px;
+	border-radius: 8px;
+	position: relative;
+	margin-top: 20px;
 }
-.right .right-messages .message .message-options-panel {
-	display: none;
-	background: white;
-	box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
-	position: absolute;
-	bottom: -75px;
-	right: 0;
-	width: 150px;
-	height: 80px;
-}
+
+.right .right-messages .message .message-options-panel {background: white;box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);position: absolute;bottom: -75px;right: 0;width: 150px;height: 80px;display: none;}
 .right .right-messages .message .message-options-panel.active {
 	display: block;
 }
@@ -318,7 +323,13 @@ span.f-right {
 
 .right .right-messages.active {
 	display: block;
+	height: 453px;
 }
+
+.right .right-messages {
+	display: block;
+}
+
 
 
 .message-sent {
@@ -347,4 +358,20 @@ span.f-right {
 
 .fa-microphone {
   float:right;
+}
+.message.sent .message-time {
+  position:absolute;
+  float:right;
+  bottom:5px;
+  font-size:10px;
+  right: 5px;
+}
+
+
+.right .right-messages {
+    background-image: url(img/mine.jpg);
+    padding: 5% 10%;
+    height: 453px;
+    width: 100%;
+    overflow-y: scroll;
 }

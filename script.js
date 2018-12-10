@@ -8,7 +8,7 @@ if (e.which == 13) {
   var now = new Date();
 
 if (newMessage) {
-  var messageTemplate = $(".template .message-sent").clone();
+  var messageTemplate = $(".template .message.sent").clone();
   messageTemplate.children(".message-text").text(newMessage);
   messageTemplate.children(".message-time").text(now.getHours()+ ":" + now.getMinutes());
   messagesContainer.append(messageTemplate);
@@ -45,4 +45,16 @@ $('#contacts-filter').keyup(function() {
     }
   });
 });
+});
+
+$(document).on('click', '.right .right-messages .message .message-options', function() {
+  $('.message-options-panel').toggle('fast');
+});
+
+$(document).on('click', '.message-destroy', function() {
+  var messageParent = $(this).parent().parent();
+
+  messageParent.hide();
+
+
 });
